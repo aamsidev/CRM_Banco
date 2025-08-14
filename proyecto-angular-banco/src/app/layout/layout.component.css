@@ -1,0 +1,94 @@
+/* Layout General */
+.layout {
+  display: grid;
+  grid-template-areas:
+    "topbar topbar"
+    "sidebar main";
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 220px 1fr;
+  height: 100vh;
+  background-color: #f5f6fa;
+}
+
+/* Topbar */
+.topbar {
+  grid-area: topbar;
+  background: #1a2a40;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 20px;
+}
+
+.top-nav a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.top-nav a.active {
+  border-bottom: 2px solid #ffcc00;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logout-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+  grid-area: sidebar;
+  background: #243b55;
+  color: white;
+  padding-top: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px 20px;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar ul li a.active {
+  background: #1abc9c;
+  border-radius: 4px;
+}
+
+/* Main Content */
+.main-content {
+  grid-area: main;
+  padding: 20px;
+  overflow-y: auto;
+}

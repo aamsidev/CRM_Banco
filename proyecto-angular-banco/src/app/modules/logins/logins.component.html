@@ -1,0 +1,54 @@
+
+<div class="login-background">
+  <div class="container-login">
+    <div class="title">
+      <h2>Bienvenido</h2>
+      <p>Ingresa tus credenciales para continuar</p>
+    </div>
+   <form (ngSubmit)="onLogin()" #loginForm="ngForm" class="form-login">
+  <div class="col">
+    <label for="email">Correo electrónico</label>
+    <input
+      type="email"
+      id="email"
+      name="correo"
+      [(ngModel)]="credentials.correo"
+      required
+      email
+      #emailInput="ngModel"
+      placeholder="estudiante123@correo.com"
+    />
+    <div class="mensaje">
+      {{ emailInput.invalid && emailInput.touched ? 'Por favor ingresa un correo válido.' : '\u00A0' }}
+    </div>
+  </div>
+
+  <div class="col">
+    <label for="password">Contraseña</label>
+    <input
+      type="password"
+      id="password"
+      name="password"
+      [(ngModel)]="credentials.password"
+      required
+      minlength="6"
+      #passwordInput="ngModel"
+      placeholder="••••••••"
+    />
+    <div class="mensaje">
+      {{ passwordInput.invalid && passwordInput.touched ? 'La contraseña debe tener al menos 6 caracteres.' : '\u00A0' }}
+    </div>
+  </div>
+
+  <div *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </div>
+
+  <button type="submit" [disabled]="loginForm.invalid">Ingresar</button>
+  <div class="extra-links">
+    <a href="#">¿Olvidaste tu contraseña?</a>
+  </div>
+</form>
+
+  </div>
+</div>

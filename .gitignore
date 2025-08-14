@@ -1,0 +1,69 @@
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+.mvn/timing.properties
+
+# ---------------------
+# Logs
+# ---------------------
+logs/
+*.log
+
+## VS Code
+.vscode/
+
+## Eclipse / Spring Tool Suite
+*.class
+*.swp
+.project
+.classpath
+.settings/
+.apt_generated/
+.factorypath
+.antlr_generated/
+.springBeans
+.sts4-cache
+
+## IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+## NetBeans
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+.DS_Store
+Thumbs.db
+
+work/
+.metadata/
+*.war
+*.ear
+*.tmp
+
+.spring-boot-devtools.properties
+
+.env
+.env.*
+
+HELP.md
+README-local.md
+
+# ---------- MODIFICADOS PARA PERMITIR ANGULAR ----------
+
+# Sí ignorar node_modules (no se sube nunca)
+**/node_modules/
+
+# ✨ PERMITIR dist/, tmp/, package-lock.json y Angular
+# (Antes estaban bloqueados, ya no lo estarán)
+# **/dist/           ← removido
+# **/tmp/            ← removido
+# .angular/          ← removido
+# .angular-cache/    ← removido
+# package-lock.json  ← removido
+# pnpm-lock.yaml     ← removido

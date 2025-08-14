@@ -1,0 +1,16 @@
+{
+  "name": "banco",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@angular/core": "^18.0.1",
+    "@angular/forms": "^18.0.1"
+  }
+}
